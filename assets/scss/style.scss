@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #1ca6b3;
+    font-family: "Kumbh Sans", sans-serif;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../img/bg-pattern-top.svg), url(../img/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 47vw bottom 46vh, left 47vw top 46vh;
+}
+
+.card {
+    background: url(../img/bg-pattern-card.svg) top no-repeat white;
+    max-width: 350px;
+    width: 90%;
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+    min-height: 375px;
+    grid-template-rows: 75% 25%;
+    &__info {
+        margin-top: 70px;
+        color: hsl(227, 10%, 46%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        &__img {
+            width: 96px;
+            height: 96px;
+            border: 5px solid white;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 10px auto;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__name {
+            display: inline-block;
+            font-size: 1.125rem;
+            color: hsl(229, 23%, 23%);
+        }
+        &__age {
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: hsl(227, 10%, 46%);
+        }
+    }
+
+    &__social {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-top: 1px solid hsla(227, 10%, 46%, 0.199);
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem;
+        span {
+            color: hsla(227, 10%, 46%, 0.486);
+            display: block;
+            font-weight: 400;
+            font-size: 0.75rem;
+        }
+        &__followers,
+        &__likes,
+        &__photos {
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+    }
+}
